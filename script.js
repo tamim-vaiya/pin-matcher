@@ -15,7 +15,7 @@ function clearPinChecker(){
 function submitBtn(){
   const pinNum =  document.getElementById('randomPin').value;
   const pinNumCheck = document.getElementById('pinChecker').value;
-  // const actionLeft = document.getElementById('action-left').innerText;
+  //const actionLeft = document.getElementById('action-left').innerText;
   if (pinNumCheck.length == 4){
     if (pinNum == pinNumCheck){
       document.getElementById('match').style.display = 'block';
