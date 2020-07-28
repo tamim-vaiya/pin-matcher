@@ -15,7 +15,6 @@ function clearPinChecker(){
 function submitBtn(){
   const pinNum =  document.getElementById('randomPin').value;
   const pinNumCheck = document.getElementById('pinChecker').value;
-  //const actionLeft = document.getElementById('action-left').innerText;
   if (pinNumCheck.length == 4){
     if (pinNum == pinNumCheck){
       document.getElementById('match').style.display = 'block';
@@ -35,6 +34,14 @@ function submitBtn(){
   }
 }
 // action left part
-// function actionLeft(){
-    // working with this part, coming soon
-// }
+function actionLeft(){
+  const actionLeft = document.getElementById("action-left");
+  let actionLeftDecrease = parseInt(actionLeft.innerText) - 1;
+  actionLeft.innerText = actionLeftDecrease;
+  if(actionLeft.innerText==0){
+        const submitBtn = document.getElementById('submit-btn');
+        submitBtn.disabled = true;
+        submitBtn.style.color = "white";
+        submitBtn.style.backgroundColor = "#595b64";
+  }
+}
